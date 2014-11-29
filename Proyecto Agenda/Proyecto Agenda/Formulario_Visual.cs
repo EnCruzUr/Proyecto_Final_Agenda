@@ -51,7 +51,16 @@ namespace Proyecto_Agenda
         {
             Combo_Ordena_por.SelectedIndex = 0;
             Combo_abcd.SelectedIndex = 0;
-            this.agenda_TelefonicaTableAdapter.Fill(this.bD_Proj_AgendaDataSet.Agenda_Telefonica);
+            string consultar_todo = "SELECT * FROM Agenda_Telefonica";
+            conexion.Open();
+            OleDbDataAdapter busqueda = new OleDbDataAdapter(consultar_todo, conexion);
+            OleDbCommandBuilder comando = new OleDbCommandBuilder();
+            DataTable datos = new DataTable();
+            busqueda.Fill(datos);
+            BindingSource muestra = new BindingSource();
+            muestra.DataSource = datos;
+            Visual_Datos.DataSource = muestra;
+            conexion.Close();
 
         }
 

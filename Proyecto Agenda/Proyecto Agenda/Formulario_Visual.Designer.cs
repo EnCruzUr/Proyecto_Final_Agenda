@@ -45,6 +45,7 @@
             this.Boton_Enviar_Mensaje = new System.Windows.Forms.ToolStripButton();
             this.agenda_TelefonicaTableAdapter = new Proyecto_Agenda.BD_Proj_AgendaDataSetTableAdapters.Agenda_TelefonicaTableAdapter();
             this.Visual_Datos = new System.Windows.Forms.DataGridView();
+            this.agendaTelefonicaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.numRegDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoFijoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoMovilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +53,6 @@
             this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.agendaTelefonicaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendaTelefonicaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bD_Proj_AgendaDataSet)).BeginInit();
@@ -68,7 +68,7 @@
             this.Boton_Menu_Salir});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(779, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(712, 26);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -116,7 +116,7 @@
             this.Boton_Enviar_Mensaje});
             this.Consultas.Location = new System.Drawing.Point(0, 26);
             this.Consultas.Name = "Consultas";
-            this.Consultas.Size = new System.Drawing.Size(779, 26);
+            this.Consultas.Size = new System.Drawing.Size(712, 26);
             this.Consultas.TabIndex = 3;
             this.Consultas.Text = "consulta0ToolStrip";
             // 
@@ -243,8 +243,8 @@
             this.Boton_Enviar_Mensaje.Image = ((System.Drawing.Image)(resources.GetObject("Boton_Enviar_Mensaje.Image")));
             this.Boton_Enviar_Mensaje.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Boton_Enviar_Mensaje.Name = "Boton_Enviar_Mensaje";
-            this.Boton_Enviar_Mensaje.Size = new System.Drawing.Size(94, 23);
-            this.Boton_Enviar_Mensaje.Text = "Enviar Mensaje";
+            this.Boton_Enviar_Mensaje.Size = new System.Drawing.Size(154, 23);
+            this.Boton_Enviar_Mensaje.Text = "Enviar Correo Electronico";
             this.Boton_Enviar_Mensaje.Click += new System.EventHandler(this.Boton_Enviar_Mensaje_Click);
             // 
             // agenda_TelefonicaTableAdapter
@@ -266,8 +266,13 @@
             this.Visual_Datos.DataSource = this.agendaTelefonicaBindingSource;
             this.Visual_Datos.Location = new System.Drawing.Point(0, 55);
             this.Visual_Datos.Name = "Visual_Datos";
-            this.Visual_Datos.Size = new System.Drawing.Size(779, 278);
+            this.Visual_Datos.Size = new System.Drawing.Size(712, 278);
             this.Visual_Datos.TabIndex = 4;
+            // 
+            // agendaTelefonicaBindingSource2
+            // 
+            this.agendaTelefonicaBindingSource2.DataMember = "Agenda_Telefonica";
+            this.agendaTelefonicaBindingSource2.DataSource = this.bD_Proj_AgendaDataSet;
             // 
             // numRegDataGridViewTextBoxColumn
             // 
@@ -275,6 +280,7 @@
             this.numRegDataGridViewTextBoxColumn.HeaderText = "Registro";
             this.numRegDataGridViewTextBoxColumn.Name = "numRegDataGridViewTextBoxColumn";
             this.numRegDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numRegDataGridViewTextBoxColumn.Width = 45;
             // 
             // telefonoFijoDataGridViewTextBoxColumn
             // 
@@ -318,16 +324,11 @@
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // agendaTelefonicaBindingSource2
-            // 
-            this.agendaTelefonicaBindingSource2.DataMember = "Agenda_Telefonica";
-            this.agendaTelefonicaBindingSource2.DataSource = this.bD_Proj_AgendaDataSet;
-            // 
             // Formulario_Visual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 334);
+            this.ClientSize = new System.Drawing.Size(712, 334);
             this.Controls.Add(this.Visual_Datos);
             this.Controls.Add(this.Consultas);
             this.Controls.Add(this.menuStrip1);
@@ -366,6 +367,8 @@
         private System.Windows.Forms.DataGridView Visual_Datos;
         private System.Windows.Forms.BindingSource agendaTelefonicaBindingSource2;
         private System.Windows.Forms.ToolStripButton Boton_buscar;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripButton Boton_Enviar_Mensaje;
         private System.Windows.Forms.DataGridViewTextBoxColumn numRegDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoFijoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoMovilDataGridViewTextBoxColumn;
@@ -373,7 +376,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripButton Boton_Enviar_Mensaje;
     }
 }
