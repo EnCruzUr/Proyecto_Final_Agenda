@@ -87,34 +87,6 @@
               <Mapping SourceColumn="e-mail" DataSetColumn="e-mail" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="Coneccion_BD (Settings)" DbObjectName="Agenda_Telefonica" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="a" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="va" GeneratorSourceName="a" GetMethodModifier="Public" GetMethodName="va" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="va" UserSourceName="a">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT  Num_Reg, [Telefono Fijo], [Telefono Movil], [Nombre(s)], Apellidos, Direccion, [e-mail]
-FROM     Agenda_Telefonica
-WHERE  ([Nombre(s)] LIKE 'a%')</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="Coneccion_BD (Settings)" DbObjectName="Agenda_Telefonica" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="b" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="vb" GeneratorSourceName="b" GetMethodModifier="Public" GetMethodName="vb" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="vb" UserSourceName="b">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT  Num_Reg, [Telefono Fijo], [Telefono Movil], [Nombre(s)], Apellidos, Direccion, [e-mail]
-FROM     Agenda_Telefonica WHERE  [Nombre(s)] LIKE 'b%'</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-              <DbSource ConnectionRef="Coneccion_BD (Settings)" DbObjectName="Agenda_Telefonica" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="c" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="vc" GeneratorSourceName="c" GetMethodModifier="Public" GetMethodName="vc" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="vc" UserSourceName="c">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT  Num_Reg, [Telefono Fijo], [Telefono Movil], [Nombre(s)], Apellidos, Direccion, [e-mail]
-FROM     Agenda_Telefonica WHERE  [Nombre(s)] LIKE 'c%'</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
               <DbSource ConnectionRef="Coneccion_BD (Settings)" DbObjectName="Agenda_Telefonica" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="consulta0" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="consulta1" GeneratorSourceName="consulta0" GetMethodModifier="Public" GetMethodName="consulta1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="consulta1" UserSourceName="consulta0">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">

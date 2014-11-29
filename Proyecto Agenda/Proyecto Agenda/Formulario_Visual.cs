@@ -12,6 +12,8 @@ namespace Proyecto_Agenda
 {
     public partial class Formulario_Visual : Form
     {
+        string ordenamiento;
+        string az;
         public Formulario_Visual()
         {
             InitializeComponent();
@@ -56,7 +58,42 @@ namespace Proyecto_Agenda
 
         private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void consulta0ToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void Boton_Buscar_Click(object sender, EventArgs e)
+        {
+            if (Combo_Ordena_por.Text == "Nombre")
+            {
+                ordenamiento = "[Nombre(s)]";
+            }
+            else if (Combo_Ordena_por.Text == "Apellido")
+            {
+                ordenamiento = "Apellidos";
+            }
+            else if (Combo_Ordena_por.Text == "Telefono")
+            {
+                ordenamiento = "[Telefono Fijo]";
+            }
+            else if (Combo_Ordena_por.Text == "e-mail")
+            {
+                ordenamiento = "[e-mail]";
+            }
+            az = Combo_abcd.Text;
+            string consulta;
+            consulta = "SELECT  Num_Reg, [Telefono Fijo], [Telefono Movil], [Nombre(s)], Apellidos, Direccion, [e-mail] FROM     Agenda_Telefonica WHERE  (" + ordenamiento + " LIKE '" + az + "%')";
+            //this.agenda_TelefonicaTableAdapter
+            // Console.WriteLine("consulta: "+consulta);
+        }
+
+        private void Combo_abcd_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

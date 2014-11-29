@@ -35,7 +35,7 @@
             this.Boton_Menu_Salir = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.consulta0ToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.consulta0ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.Consultas = new System.Windows.Forms.ToolStrip();
             this.numRegDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoFijoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoMovilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +49,10 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.Combo_Ordena_por = new System.Windows.Forms.ToolStripComboBox();
             this.Combo_abcd = new System.Windows.Forms.ToolStripComboBox();
+            this.Boton_Buscar = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.consulta0ToolStrip.SuspendLayout();
+            this.Consultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendaTelefonicaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bD_Proj_AgendaDataSet)).BeginInit();
             this.SuspendLayout();
@@ -107,18 +108,20 @@
             this.consulta0ToolStripButton.Text = "Mostrar Todos";
             this.consulta0ToolStripButton.Click += new System.EventHandler(this.consulta0ToolStripButton_Click);
             // 
-            // consulta0ToolStrip
+            // Consultas
             // 
-            this.consulta0ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Consultas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consulta0ToolStripButton,
             this.toolStripLabel1,
             this.Combo_Ordena_por,
-            this.Combo_abcd});
-            this.consulta0ToolStrip.Location = new System.Drawing.Point(0, 26);
-            this.consulta0ToolStrip.Name = "consulta0ToolStrip";
-            this.consulta0ToolStrip.Size = new System.Drawing.Size(693, 26);
-            this.consulta0ToolStrip.TabIndex = 3;
-            this.consulta0ToolStrip.Text = "consulta0ToolStrip";
+            this.Combo_abcd,
+            this.Boton_Buscar});
+            this.Consultas.Location = new System.Drawing.Point(0, 26);
+            this.Consultas.Name = "Consultas";
+            this.Consultas.Size = new System.Drawing.Size(693, 26);
+            this.Consultas.TabIndex = 3;
+            this.Consultas.Text = "consulta0ToolStrip";
+            this.Consultas.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.consulta0ToolStrip_ItemClicked);
             // 
             // numRegDataGridViewTextBoxColumn
             // 
@@ -269,13 +272,23 @@
             this.Combo_abcd.MergeIndex = 1;
             this.Combo_abcd.Name = "Combo_abcd";
             this.Combo_abcd.Size = new System.Drawing.Size(75, 26);
+            this.Combo_abcd.Click += new System.EventHandler(this.Combo_abcd_Click);
+            // 
+            // Boton_Buscar
+            // 
+            this.Boton_Buscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.Boton_Buscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Boton_Buscar.Name = "Boton_Buscar";
+            this.Boton_Buscar.Size = new System.Drawing.Size(49, 23);
+            this.Boton_Buscar.Text = "Buscar";
+            this.Boton_Buscar.Click += new System.EventHandler(this.Boton_Buscar_Click);
             // 
             // Formulario_Visual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(693, 334);
-            this.Controls.Add(this.consulta0ToolStrip);
+            this.Controls.Add(this.Consultas);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -287,8 +300,8 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.consulta0ToolStrip.ResumeLayout(false);
-            this.consulta0ToolStrip.PerformLayout();
+            this.Consultas.ResumeLayout(false);
+            this.Consultas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendaTelefonicaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bD_Proj_AgendaDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -313,9 +326,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripButton consulta0ToolStripButton;
-        private System.Windows.Forms.ToolStrip consulta0ToolStrip;
+        private System.Windows.Forms.ToolStrip Consultas;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripComboBox Combo_Ordena_por;
         private System.Windows.Forms.ToolStripComboBox Combo_abcd;
+        private System.Windows.Forms.ToolStripButton Boton_Buscar;
     }
 }
