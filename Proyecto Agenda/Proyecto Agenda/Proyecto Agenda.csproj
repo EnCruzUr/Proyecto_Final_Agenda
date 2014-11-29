@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,16 +45,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BD_Proj_AgendaDataSet.cs">
+      <DependentUpon>BD_Proj_AgendaDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BD_Proj_AgendaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_Proj_AgendaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario_Agenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formulario_Agenda.Designer.cs">
+      <DependentUpon>Formulario_Agenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario_Edicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario_Edicion.Designer.cs">
+      <DependentUpon>Formulario_Edicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulario_Visual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario_Visual.Designer.cs">
+      <DependentUpon>Formulario_Visual.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Formulario_Agenda.resx">
+      <DependentUpon>Formulario_Agenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario_Edicion.resx">
+      <DependentUpon>Formulario_Edicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario_Visual.resx">
+      <DependentUpon>Formulario_Visual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -64,6 +92,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="BD_Proj_AgendaDataSet.xsc">
+      <DependentUpon>BD_Proj_AgendaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD_Proj_AgendaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD_Proj_AgendaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD_Proj_AgendaDataSet.xss">
+      <DependentUpon>BD_Proj_AgendaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
