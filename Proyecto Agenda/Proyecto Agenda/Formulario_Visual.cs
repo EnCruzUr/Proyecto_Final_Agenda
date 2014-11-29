@@ -80,10 +80,6 @@ namespace Proyecto_Agenda
             {
                 ordenamiento = "Apellidos";
             }
-            else if (Combo_Ordena_por.Text == "Telefono")
-            {
-                ordenamiento = "[Telefono Fijo]";
-            }
             else if (Combo_Ordena_por.Text == "e-mail")
             {
                 ordenamiento = "[e-mail]";
@@ -109,7 +105,6 @@ namespace Proyecto_Agenda
             a = Visual_Datos.CurrentCell.RowIndex;
             b = Visual_Datos.CurrentCell.ColumnIndex;
             correo = Visual_Datos[b, a].Value.ToString();
-            Console.WriteLine("Correo: " + correo);
             Formulario_Correo enviar_email = new Formulario_Correo(correo);
             enviar_email.Show();
 

@@ -131,12 +131,10 @@
             this.Combo_Ordena_por.AutoCompleteCustomSource.AddRange(new string[] {
             "Nombre",
             "Apellido",
-            "Telefono",
             "e-mail"});
             this.Combo_Ordena_por.Items.AddRange(new object[] {
             "Nombre",
             "Apellido",
-            "Telefono",
             "e-mail"});
             this.Combo_Ordena_por.Name = "Combo_Ordena_por";
             this.Combo_Ordena_por.Size = new System.Drawing.Size(75, 26);
