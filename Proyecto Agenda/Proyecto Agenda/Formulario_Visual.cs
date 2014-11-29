@@ -38,8 +38,8 @@ namespace Proyecto_Agenda
         private void Boton_Menu_Regresar_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Formulario_Agenda agenda = new Formulario_Agenda();
-            agenda.Show();
+            Formulario_Edicion edicion = new Formulario_Edicion();
+            edicion.Show();
         }
 
         private void Boton_Menu_Salir_Click(object sender, EventArgs e)
@@ -51,7 +51,6 @@ namespace Proyecto_Agenda
         {
             Combo_Ordena_por.SelectedIndex = 0;
             Combo_abcd.SelectedIndex = 0;
-            // TODO: esta línea de código carga datos en la tabla 'bD_Proj_AgendaDataSet.Agenda_Telefonica' Puede moverla o quitarla según sea necesario.
             this.agenda_TelefonicaTableAdapter.Fill(this.bD_Proj_AgendaDataSet.Agenda_Telefonica);
 
         }
@@ -111,6 +110,9 @@ namespace Proyecto_Agenda
             b = Visual_Datos.CurrentCell.ColumnIndex;
             correo = Visual_Datos[b, a].Value.ToString();
             Console.WriteLine("Correo: " + correo);
+            Formulario_Correo enviar_email = new Formulario_Correo(correo);
+            enviar_email.Show();
+
         }
     }
 }

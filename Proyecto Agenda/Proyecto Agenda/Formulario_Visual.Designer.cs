@@ -41,6 +41,8 @@
             this.Combo_Ordena_por = new System.Windows.Forms.ToolStripComboBox();
             this.Combo_abcd = new System.Windows.Forms.ToolStripComboBox();
             this.Boton_buscar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.Boton_Enviar_Mensaje = new System.Windows.Forms.ToolStripButton();
             this.agenda_TelefonicaTableAdapter = new Proyecto_Agenda.BD_Proj_AgendaDataSetTableAdapters.Agenda_TelefonicaTableAdapter();
             this.Visual_Datos = new System.Windows.Forms.DataGridView();
             this.numRegDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,8 +53,6 @@
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.agendaTelefonicaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.Boton_Enviar_Mensaje = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendaTelefonicaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bD_Proj_AgendaDataSet)).BeginInit();
@@ -75,8 +75,8 @@
             // Boton_Menu_Regresar
             // 
             this.Boton_Menu_Regresar.Name = "Boton_Menu_Regresar";
-            this.Boton_Menu_Regresar.Size = new System.Drawing.Size(68, 22);
-            this.Boton_Menu_Regresar.Text = "Regresar";
+            this.Boton_Menu_Regresar.Size = new System.Drawing.Size(60, 22);
+            this.Boton_Menu_Regresar.Text = "Edicion";
             this.Boton_Menu_Regresar.Click += new System.EventHandler(this.Boton_Menu_Regresar_Click_1);
             // 
             // Boton_Menu_Salir
@@ -233,6 +233,22 @@
             this.Boton_buscar.Text = "Buscar";
             this.Boton_buscar.Click += new System.EventHandler(this.Boton_buscar_Click_1);
             // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(124, 23);
+            this.toolStripLabel2.Text = "                             ";
+            // 
+            // Boton_Enviar_Mensaje
+            // 
+            this.Boton_Enviar_Mensaje.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.Boton_Enviar_Mensaje.Image = ((System.Drawing.Image)(resources.GetObject("Boton_Enviar_Mensaje.Image")));
+            this.Boton_Enviar_Mensaje.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Boton_Enviar_Mensaje.Name = "Boton_Enviar_Mensaje";
+            this.Boton_Enviar_Mensaje.Size = new System.Drawing.Size(94, 23);
+            this.Boton_Enviar_Mensaje.Text = "Enviar Mensaje";
+            this.Boton_Enviar_Mensaje.Click += new System.EventHandler(this.Boton_Enviar_Mensaje_Click);
+            // 
             // agenda_TelefonicaTableAdapter
             // 
             this.agenda_TelefonicaTableAdapter.ClearBeforeFill = true;
@@ -308,22 +324,6 @@
             // 
             this.agendaTelefonicaBindingSource2.DataMember = "Agenda_Telefonica";
             this.agendaTelefonicaBindingSource2.DataSource = this.bD_Proj_AgendaDataSet;
-            // 
-            // Boton_Enviar_Mensaje
-            // 
-            this.Boton_Enviar_Mensaje.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.Boton_Enviar_Mensaje.Image = ((System.Drawing.Image)(resources.GetObject("Boton_Enviar_Mensaje.Image")));
-            this.Boton_Enviar_Mensaje.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Boton_Enviar_Mensaje.Name = "Boton_Enviar_Mensaje";
-            this.Boton_Enviar_Mensaje.Size = new System.Drawing.Size(94, 23);
-            this.Boton_Enviar_Mensaje.Text = "Enviar Mensaje";
-            this.Boton_Enviar_Mensaje.Click += new System.EventHandler(this.Boton_Enviar_Mensaje_Click);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(124, 23);
-            this.toolStripLabel2.Text = "                             ";
             // 
             // Formulario_Visual
             // 

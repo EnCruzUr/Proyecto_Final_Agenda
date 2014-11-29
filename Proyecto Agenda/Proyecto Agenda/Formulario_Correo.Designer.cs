@@ -33,11 +33,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.mi_correo_txt = new System.Windows.Forms.TextBox();
+            this.mi_contraseña_txt = new System.Windows.Forms.TextBox();
+            this.correo_destino_txt = new System.Windows.Forms.TextBox();
+            this.asunto_txt = new System.Windows.Forms.TextBox();
+            this.mensaje_txt = new System.Windows.Forms.TextBox();
             this.Boton_Enviar = new System.Windows.Forms.Button();
             this.Boton_Cancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -87,41 +87,43 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Mensaje";
             // 
-            // textBox1
+            // mi_correo_txt
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 20);
-            this.textBox1.TabIndex = 5;
+            this.mi_correo_txt.Location = new System.Drawing.Point(112, 2);
+            this.mi_correo_txt.Name = "mi_correo_txt";
+            this.mi_correo_txt.Size = new System.Drawing.Size(189, 20);
+            this.mi_correo_txt.TabIndex = 5;
             // 
-            // textBox2
+            // mi_contraseña_txt
             // 
-            this.textBox2.Location = new System.Drawing.Point(112, 30);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 20);
-            this.textBox2.TabIndex = 6;
+            this.mi_contraseña_txt.Location = new System.Drawing.Point(112, 30);
+            this.mi_contraseña_txt.Name = "mi_contraseña_txt";
+            this.mi_contraseña_txt.PasswordChar = '*';
+            this.mi_contraseña_txt.Size = new System.Drawing.Size(189, 20);
+            this.mi_contraseña_txt.TabIndex = 6;
             // 
-            // textBox3
+            // correo_destino_txt
             // 
-            this.textBox3.Location = new System.Drawing.Point(112, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(189, 20);
-            this.textBox3.TabIndex = 7;
+            this.correo_destino_txt.Enabled = false;
+            this.correo_destino_txt.Location = new System.Drawing.Point(112, 64);
+            this.correo_destino_txt.Name = "correo_destino_txt";
+            this.correo_destino_txt.Size = new System.Drawing.Size(189, 20);
+            this.correo_destino_txt.TabIndex = 7;
             // 
-            // textBox4
+            // asunto_txt
             // 
-            this.textBox4.Location = new System.Drawing.Point(112, 95);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(189, 20);
-            this.textBox4.TabIndex = 8;
+            this.asunto_txt.Location = new System.Drawing.Point(112, 95);
+            this.asunto_txt.Name = "asunto_txt";
+            this.asunto_txt.Size = new System.Drawing.Size(189, 20);
+            this.asunto_txt.TabIndex = 8;
             // 
-            // textBox5
+            // mensaje_txt
             // 
-            this.textBox5.Location = new System.Drawing.Point(112, 130);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(235, 189);
-            this.textBox5.TabIndex = 9;
+            this.mensaje_txt.Location = new System.Drawing.Point(112, 130);
+            this.mensaje_txt.Multiline = true;
+            this.mensaje_txt.Name = "mensaje_txt";
+            this.mensaje_txt.Size = new System.Drawing.Size(235, 189);
+            this.mensaje_txt.TabIndex = 9;
             // 
             // Boton_Enviar
             // 
@@ -131,6 +133,7 @@
             this.Boton_Enviar.TabIndex = 10;
             this.Boton_Enviar.Text = "Enviar";
             this.Boton_Enviar.UseVisualStyleBackColor = true;
+            this.Boton_Enviar.Click += new System.EventHandler(this.Boton_Enviar_Click);
             // 
             // Boton_Cancelar
             // 
@@ -140,6 +143,7 @@
             this.Boton_Cancelar.TabIndex = 11;
             this.Boton_Cancelar.Text = "Cancelar";
             this.Boton_Cancelar.UseVisualStyleBackColor = true;
+            this.Boton_Cancelar.Click += new System.EventHandler(this.Boton_Cancelar_Click);
             // 
             // Formulario_Correo
             // 
@@ -148,11 +152,11 @@
             this.ClientSize = new System.Drawing.Size(360, 340);
             this.Controls.Add(this.Boton_Cancelar);
             this.Controls.Add(this.Boton_Enviar);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.mensaje_txt);
+            this.Controls.Add(this.asunto_txt);
+            this.Controls.Add(this.correo_destino_txt);
+            this.Controls.Add(this.mi_contraseña_txt);
+            this.Controls.Add(this.mi_correo_txt);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -160,6 +164,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Formulario_Correo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario_Correo";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -173,11 +178,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox mi_correo_txt;
+        private System.Windows.Forms.TextBox mi_contraseña_txt;
+        private System.Windows.Forms.TextBox correo_destino_txt;
+        private System.Windows.Forms.TextBox asunto_txt;
+        private System.Windows.Forms.TextBox mensaje_txt;
         private System.Windows.Forms.Button Boton_Enviar;
         private System.Windows.Forms.Button Boton_Cancelar;
     }

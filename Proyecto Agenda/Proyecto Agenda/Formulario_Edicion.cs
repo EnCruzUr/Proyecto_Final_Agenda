@@ -20,9 +20,8 @@ namespace Proyecto_Agenda
         private void Boton_Menu_Regresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Formulario_Agenda agenda = new Formulario_Agenda();
-            agenda.Show();
-            //connectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\bin\Debug\BD_Proj_Agenda.accdb;Persist Security Info=True;Jet OLEDB:Database Password=2789"
+            Formulario_Visual visual = new Formulario_Visual();
+            visual.Show();
         }
 
         private void Boton_Menu_Salir_Click(object sender, EventArgs e)
@@ -40,9 +39,7 @@ namespace Proyecto_Agenda
 
         private void Formulario_Edicion_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'bD_Proj_AgendaDataSet.Agenda_Telefonica' Puede moverla o quitarla según sea necesario.
             this.agenda_TelefonicaTableAdapter.Fill(this.bD_Proj_AgendaDataSet.Agenda_Telefonica);
-            // TODO: esta línea de código carga datos en la tabla 'bD_Proj_AgendaDataSet.Agenda_Telefonica' Puede moverla o quitarla según sea necesario.
             this.agenda_TelefonicaTableAdapter.Fill(this.bD_Proj_AgendaDataSet.Agenda_Telefonica);
 
         }

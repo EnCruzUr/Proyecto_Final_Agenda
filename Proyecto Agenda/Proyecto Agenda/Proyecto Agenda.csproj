@@ -55,12 +55,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD_Proj_AgendaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Formulario_Agenda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formulario_Agenda.Designer.cs">
-      <DependentUpon>Formulario_Agenda.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formulario_Correo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,9 +75,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formulario_Agenda.resx">
-      <DependentUpon>Formulario_Agenda.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formulario_Correo.resx">
       <DependentUpon>Formulario_Correo.cs</DependentUpon>
     </EmbeddedResource>

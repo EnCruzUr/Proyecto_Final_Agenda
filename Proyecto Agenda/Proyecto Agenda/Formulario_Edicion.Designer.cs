@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario_Edicion));
             System.Windows.Forms.Label telefono_FijoLabel;
             System.Windows.Forms.Label telefono_MovilLabel;
             System.Windows.Forms.Label nombre_s_Label;
             System.Windows.Forms.Label apellidosLabel;
             System.Windows.Forms.Label direccionLabel;
             System.Windows.Forms.Label e_mailLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formulario_Edicion));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Boton_Menu_Regresar = new System.Windows.Forms.ToolStripMenuItem();
             this.Boton_Menu_Salir = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,6 +86,60 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // telefono_FijoLabel
+            // 
+            telefono_FijoLabel.AutoSize = true;
+            telefono_FijoLabel.Location = new System.Drawing.Point(16, 11);
+            telefono_FijoLabel.Name = "telefono_FijoLabel";
+            telefono_FijoLabel.Size = new System.Drawing.Size(71, 13);
+            telefono_FijoLabel.TabIndex = 2;
+            telefono_FijoLabel.Text = "Telefono Fijo:";
+            // 
+            // telefono_MovilLabel
+            // 
+            telefono_MovilLabel.AutoSize = true;
+            telefono_MovilLabel.Location = new System.Drawing.Point(16, 37);
+            telefono_MovilLabel.Name = "telefono_MovilLabel";
+            telefono_MovilLabel.Size = new System.Drawing.Size(80, 13);
+            telefono_MovilLabel.TabIndex = 4;
+            telefono_MovilLabel.Text = "Telefono Movil:";
+            // 
+            // nombre_s_Label
+            // 
+            nombre_s_Label.AutoSize = true;
+            nombre_s_Label.Location = new System.Drawing.Point(16, 63);
+            nombre_s_Label.Name = "nombre_s_Label";
+            nombre_s_Label.Size = new System.Drawing.Size(58, 13);
+            nombre_s_Label.TabIndex = 6;
+            nombre_s_Label.Text = "Nombre(s):";
+            // 
+            // apellidosLabel
+            // 
+            apellidosLabel.AutoSize = true;
+            apellidosLabel.Location = new System.Drawing.Point(316, 11);
+            apellidosLabel.Name = "apellidosLabel";
+            apellidosLabel.Size = new System.Drawing.Size(52, 13);
+            apellidosLabel.TabIndex = 8;
+            apellidosLabel.Text = "Apellidos:";
+            // 
+            // direccionLabel
+            // 
+            direccionLabel.AutoSize = true;
+            direccionLabel.Location = new System.Drawing.Point(316, 37);
+            direccionLabel.Name = "direccionLabel";
+            direccionLabel.Size = new System.Drawing.Size(55, 13);
+            direccionLabel.TabIndex = 10;
+            direccionLabel.Text = "Direccion:";
+            // 
+            // e_mailLabel
+            // 
+            e_mailLabel.AutoSize = true;
+            e_mailLabel.Location = new System.Drawing.Point(316, 63);
+            e_mailLabel.Name = "e_mailLabel";
+            e_mailLabel.Size = new System.Drawing.Size(37, 13);
+            e_mailLabel.TabIndex = 12;
+            e_mailLabel.Text = "e-mail:";
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -100,8 +154,8 @@
             // Boton_Menu_Regresar
             // 
             this.Boton_Menu_Regresar.Name = "Boton_Menu_Regresar";
-            this.Boton_Menu_Regresar.Size = new System.Drawing.Size(68, 22);
-            this.Boton_Menu_Regresar.Text = "Regresar";
+            this.Boton_Menu_Regresar.Size = new System.Drawing.Size(70, 22);
+            this.Boton_Menu_Regresar.Text = "Visualizar";
             this.Boton_Menu_Regresar.Click += new System.EventHandler(this.Boton_Menu_Regresar_Click);
             // 
             // Boton_Menu_Salir
@@ -337,15 +391,6 @@
             this.panel1.Size = new System.Drawing.Size(681, 86);
             this.panel1.TabIndex = 3;
             // 
-            // telefono_FijoLabel
-            // 
-            telefono_FijoLabel.AutoSize = true;
-            telefono_FijoLabel.Location = new System.Drawing.Point(16, 11);
-            telefono_FijoLabel.Name = "telefono_FijoLabel";
-            telefono_FijoLabel.Size = new System.Drawing.Size(71, 13);
-            telefono_FijoLabel.TabIndex = 2;
-            telefono_FijoLabel.Text = "Telefono Fijo:";
-            // 
             // telefono_FijoTextBox
             // 
             this.telefono_FijoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agenda_TelefonicaBindingSource, "Telefono Fijo", true));
@@ -353,15 +398,6 @@
             this.telefono_FijoTextBox.Name = "telefono_FijoTextBox";
             this.telefono_FijoTextBox.Size = new System.Drawing.Size(179, 20);
             this.telefono_FijoTextBox.TabIndex = 3;
-            // 
-            // telefono_MovilLabel
-            // 
-            telefono_MovilLabel.AutoSize = true;
-            telefono_MovilLabel.Location = new System.Drawing.Point(16, 37);
-            telefono_MovilLabel.Name = "telefono_MovilLabel";
-            telefono_MovilLabel.Size = new System.Drawing.Size(80, 13);
-            telefono_MovilLabel.TabIndex = 4;
-            telefono_MovilLabel.Text = "Telefono Movil:";
             // 
             // telefono_MovilTextBox
             // 
@@ -371,15 +407,6 @@
             this.telefono_MovilTextBox.Size = new System.Drawing.Size(179, 20);
             this.telefono_MovilTextBox.TabIndex = 5;
             // 
-            // nombre_s_Label
-            // 
-            nombre_s_Label.AutoSize = true;
-            nombre_s_Label.Location = new System.Drawing.Point(16, 63);
-            nombre_s_Label.Name = "nombre_s_Label";
-            nombre_s_Label.Size = new System.Drawing.Size(58, 13);
-            nombre_s_Label.TabIndex = 6;
-            nombre_s_Label.Text = "Nombre(s):";
-            // 
             // nombre_s_TextBox
             // 
             this.nombre_s_TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agenda_TelefonicaBindingSource, "Nombre(s)", true));
@@ -387,15 +414,6 @@
             this.nombre_s_TextBox.Name = "nombre_s_TextBox";
             this.nombre_s_TextBox.Size = new System.Drawing.Size(179, 20);
             this.nombre_s_TextBox.TabIndex = 7;
-            // 
-            // apellidosLabel
-            // 
-            apellidosLabel.AutoSize = true;
-            apellidosLabel.Location = new System.Drawing.Point(316, 11);
-            apellidosLabel.Name = "apellidosLabel";
-            apellidosLabel.Size = new System.Drawing.Size(52, 13);
-            apellidosLabel.TabIndex = 8;
-            apellidosLabel.Text = "Apellidos:";
             // 
             // apellidosTextBox
             // 
@@ -405,15 +423,6 @@
             this.apellidosTextBox.Size = new System.Drawing.Size(172, 20);
             this.apellidosTextBox.TabIndex = 9;
             // 
-            // direccionLabel
-            // 
-            direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(316, 37);
-            direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(55, 13);
-            direccionLabel.TabIndex = 10;
-            direccionLabel.Text = "Direccion:";
-            // 
             // direccionTextBox
             // 
             this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.agenda_TelefonicaBindingSource, "Direccion", true));
@@ -421,15 +430,6 @@
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(172, 20);
             this.direccionTextBox.TabIndex = 11;
-            // 
-            // e_mailLabel
-            // 
-            e_mailLabel.AutoSize = true;
-            e_mailLabel.Location = new System.Drawing.Point(316, 63);
-            e_mailLabel.Name = "e_mailLabel";
-            e_mailLabel.Size = new System.Drawing.Size(37, 13);
-            e_mailLabel.TabIndex = 12;
-            e_mailLabel.Text = "e-mail:";
             // 
             // e_mailTextBox
             // 
