@@ -61,6 +61,12 @@
     <Compile Include="Formulario_Agenda.Designer.cs">
       <DependentUpon>Formulario_Agenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formulario_Correo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulario_Correo.Designer.cs">
+      <DependentUpon>Formulario_Correo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulario_Edicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formulario_Agenda.resx">
       <DependentUpon>Formulario_Agenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulario_Correo.resx">
+      <DependentUpon>Formulario_Correo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulario_Edicion.resx">
       <DependentUpon>Formulario_Edicion.cs</DependentUpon>

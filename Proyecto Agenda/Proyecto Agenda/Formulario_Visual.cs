@@ -29,16 +29,9 @@ namespace Proyecto_Agenda
             OleDbCommandBuilder comando = new OleDbCommandBuilder();
             DataTable datos = new DataTable();
             busqueda.Fill(datos);
-            //DataGridView Visual = new DataGridView();
             BindingSource muestra = new BindingSource();
             muestra.DataSource = datos;
             Visual_Datos.DataSource = muestra;
-
-
-
-
-
-            
             conexion.Close();
         }
 
@@ -56,6 +49,8 @@ namespace Proyecto_Agenda
 
         private void Formulario_Visual_Load(object sender, EventArgs e)
         {
+            Combo_Ordena_por.SelectedIndex = 0;
+            Combo_abcd.SelectedIndex = 0;
             // TODO: esta línea de código carga datos en la tabla 'bD_Proj_AgendaDataSet.Agenda_Telefonica' Puede moverla o quitarla según sea necesario.
             this.agenda_TelefonicaTableAdapter.Fill(this.bD_Proj_AgendaDataSet.Agenda_Telefonica);
 
@@ -63,14 +58,17 @@ namespace Proyecto_Agenda
 
         private void consulta0ToolStripButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.agenda_TelefonicaTableAdapter.consulta0(this.bD_Proj_AgendaDataSet.Agenda_Telefonica);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            string consultar_todo = "SELECT * FROM Agenda_Telefonica";
+            conexion.Open();
+            OleDbDataAdapter busqueda = new OleDbDataAdapter(consultar_todo, conexion);
+            OleDbCommandBuilder comando = new OleDbCommandBuilder();
+            DataTable datos = new DataTable();
+            busqueda.Fill(datos);
+            BindingSource muestra = new BindingSource();
+            muestra.DataSource = datos;
+            Visual_Datos.DataSource = muestra;
+            conexion.Close();
+
 
         }
         private void Boton_buscar_Click_1(object sender, EventArgs e)
@@ -99,9 +97,20 @@ namespace Proyecto_Agenda
             az = Combo_abcd.Text;
             string consulta;
             consulta = "SELECT  Num_Reg, [Telefono Fijo], [Telefono Movil], [Nombre(s)], Apellidos, Direccion, [e-mail] FROM     Agenda_Telefonica WHERE  (" + ordenamiento + " LIKE '" + az + "%')";
-            //this.agenda_TelefonicaTableAdapter
-            Console.WriteLine("consulta: " + consulta);
             busqueda_de_agenda(consulta);
+        }
+
+        private void Boton_Enviar_Mensaje_Click(object sender, EventArgs e)
+        {
+            string correo;
+            string msg = String.Format("Row: {0}, Column: {1}",
+            Visual_Datos.CurrentCell.RowIndex,
+            Visual_Datos.CurrentCell.ColumnIndex);
+            int a, b;
+            a = Visual_Datos.CurrentCell.RowIndex;
+            b = Visual_Datos.CurrentCell.ColumnIndex;
+            correo = Visual_Datos[b, a].Value.ToString();
+            Console.WriteLine("Correo: " + correo);
         }
     }
 }

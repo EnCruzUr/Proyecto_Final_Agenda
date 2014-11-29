@@ -40,10 +40,19 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.Combo_Ordena_por = new System.Windows.Forms.ToolStripComboBox();
             this.Combo_abcd = new System.Windows.Forms.ToolStripComboBox();
+            this.Boton_buscar = new System.Windows.Forms.ToolStripButton();
             this.agenda_TelefonicaTableAdapter = new Proyecto_Agenda.BD_Proj_AgendaDataSetTableAdapters.Agenda_TelefonicaTableAdapter();
             this.Visual_Datos = new System.Windows.Forms.DataGridView();
+            this.numRegDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoFijoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoMovilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.agendaTelefonicaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.Boton_buscar = new System.Windows.Forms.ToolStripButton();
+            this.Boton_Enviar_Mensaje = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendaTelefonicaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bD_Proj_AgendaDataSet)).BeginInit();
@@ -102,13 +111,14 @@
             this.toolStripLabel1,
             this.Combo_Ordena_por,
             this.Combo_abcd,
-            this.Boton_buscar});
+            this.Boton_buscar,
+            this.toolStripLabel2,
+            this.Boton_Enviar_Mensaje});
             this.Consultas.Location = new System.Drawing.Point(0, 26);
             this.Consultas.Name = "Consultas";
             this.Consultas.Size = new System.Drawing.Size(779, 26);
             this.Consultas.TabIndex = 3;
             this.Consultas.Text = "consulta0ToolStrip";
-            //this.Consultas.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.consulta0ToolStrip_ItemClicked);
             // 
             // toolStripLabel1
             // 
@@ -128,7 +138,6 @@
             "Apellido",
             "Telefono",
             "e-mail"});
-            this.Combo_Ordena_por.MergeIndex = 1;
             this.Combo_Ordena_por.Name = "Combo_Ordena_por";
             this.Combo_Ordena_por.Size = new System.Drawing.Size(75, 26);
             // 
@@ -211,27 +220,8 @@
             "7",
             "8",
             "9"});
-            this.Combo_abcd.MergeIndex = 1;
             this.Combo_abcd.Name = "Combo_abcd";
             this.Combo_abcd.Size = new System.Drawing.Size(75, 26);
-            //this.Combo_abcd.OwnerChanged += new System.EventHandler(this.Combo_abcd_OwnerChanged);
-            // 
-            // agenda_TelefonicaTableAdapter
-            // 
-            this.agenda_TelefonicaTableAdapter.ClearBeforeFill = true;
-            // 
-            // Visual_Datos
-            // 
-            this.Visual_Datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Visual_Datos.Location = new System.Drawing.Point(0, 55);
-            this.Visual_Datos.Name = "Visual_Datos";
-            this.Visual_Datos.Size = new System.Drawing.Size(779, 278);
-            this.Visual_Datos.TabIndex = 4;
-            // 
-            // agendaTelefonicaBindingSource2
-            // 
-            this.agendaTelefonicaBindingSource2.DataMember = "Agenda_Telefonica";
-            this.agendaTelefonicaBindingSource2.DataSource = this.bD_Proj_AgendaDataSet;
             // 
             // Boton_buscar
             // 
@@ -242,6 +232,98 @@
             this.Boton_buscar.Size = new System.Drawing.Size(49, 23);
             this.Boton_buscar.Text = "Buscar";
             this.Boton_buscar.Click += new System.EventHandler(this.Boton_buscar_Click_1);
+            // 
+            // agenda_TelefonicaTableAdapter
+            // 
+            this.agenda_TelefonicaTableAdapter.ClearBeforeFill = true;
+            // 
+            // Visual_Datos
+            // 
+            this.Visual_Datos.AutoGenerateColumns = false;
+            this.Visual_Datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Visual_Datos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numRegDataGridViewTextBoxColumn,
+            this.telefonoFijoDataGridViewTextBoxColumn,
+            this.telefonoMovilDataGridViewTextBoxColumn,
+            this.nombresDataGridViewTextBoxColumn,
+            this.apellidosDataGridViewTextBoxColumn,
+            this.direccionDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn});
+            this.Visual_Datos.DataSource = this.agendaTelefonicaBindingSource;
+            this.Visual_Datos.Location = new System.Drawing.Point(0, 55);
+            this.Visual_Datos.Name = "Visual_Datos";
+            this.Visual_Datos.Size = new System.Drawing.Size(779, 278);
+            this.Visual_Datos.TabIndex = 4;
+            // 
+            // numRegDataGridViewTextBoxColumn
+            // 
+            this.numRegDataGridViewTextBoxColumn.DataPropertyName = "Num_Reg";
+            this.numRegDataGridViewTextBoxColumn.HeaderText = "Registro";
+            this.numRegDataGridViewTextBoxColumn.Name = "numRegDataGridViewTextBoxColumn";
+            this.numRegDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefonoFijoDataGridViewTextBoxColumn
+            // 
+            this.telefonoFijoDataGridViewTextBoxColumn.DataPropertyName = "Telefono Fijo";
+            this.telefonoFijoDataGridViewTextBoxColumn.HeaderText = "Telefono Fijo";
+            this.telefonoFijoDataGridViewTextBoxColumn.Name = "telefonoFijoDataGridViewTextBoxColumn";
+            this.telefonoFijoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefonoMovilDataGridViewTextBoxColumn
+            // 
+            this.telefonoMovilDataGridViewTextBoxColumn.DataPropertyName = "Telefono Movil";
+            this.telefonoMovilDataGridViewTextBoxColumn.HeaderText = "Telefono Movil";
+            this.telefonoMovilDataGridViewTextBoxColumn.Name = "telefonoMovilDataGridViewTextBoxColumn";
+            this.telefonoMovilDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombresDataGridViewTextBoxColumn
+            // 
+            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombre(s)";
+            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombre(s)";
+            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
+            this.nombresDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // apellidosDataGridViewTextBoxColumn
+            // 
+            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
+            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
+            this.apellidosDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "e-mail";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "e-mail";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // agendaTelefonicaBindingSource2
+            // 
+            this.agendaTelefonicaBindingSource2.DataMember = "Agenda_Telefonica";
+            this.agendaTelefonicaBindingSource2.DataSource = this.bD_Proj_AgendaDataSet;
+            // 
+            // Boton_Enviar_Mensaje
+            // 
+            this.Boton_Enviar_Mensaje.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.Boton_Enviar_Mensaje.Image = ((System.Drawing.Image)(resources.GetObject("Boton_Enviar_Mensaje.Image")));
+            this.Boton_Enviar_Mensaje.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Boton_Enviar_Mensaje.Name = "Boton_Enviar_Mensaje";
+            this.Boton_Enviar_Mensaje.Size = new System.Drawing.Size(94, 23);
+            this.Boton_Enviar_Mensaje.Text = "Enviar Mensaje";
+            this.Boton_Enviar_Mensaje.Click += new System.EventHandler(this.Boton_Enviar_Mensaje_Click);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(124, 23);
+            this.toolStripLabel2.Text = "                             ";
             // 
             // Formulario_Visual
             // 
@@ -286,5 +368,14 @@
         private System.Windows.Forms.DataGridView Visual_Datos;
         private System.Windows.Forms.BindingSource agendaTelefonicaBindingSource2;
         private System.Windows.Forms.ToolStripButton Boton_buscar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numRegDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoFijoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoMovilDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripButton Boton_Enviar_Mensaje;
     }
 }
