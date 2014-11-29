@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Agenda
 {
-    partial class Form1
+    partial class Formulario_Agenda
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Formulario_Agenda
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(770, 435);
+            this.Name = "Formulario_Agenda";
+            this.Text = "Agenda";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

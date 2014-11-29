@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_Agenda
 {
-    public partial class Form1 : Form
+    public partial class Formulario_Agenda : Form
     {
-        public Form1()
+        public Formulario_Agenda()
         {
             InitializeComponent();
         }
