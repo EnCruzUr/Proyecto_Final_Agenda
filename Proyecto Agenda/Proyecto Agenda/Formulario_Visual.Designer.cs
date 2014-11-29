@@ -40,26 +40,15 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.Combo_Ordena_por = new System.Windows.Forms.ToolStripComboBox();
             this.Combo_abcd = new System.Windows.Forms.ToolStripComboBox();
-            this.Boton_Buscar = new System.Windows.Forms.ToolStripButton();
             this.agenda_TelefonicaTableAdapter = new Proyecto_Agenda.BD_Proj_AgendaDataSetTableAdapters.Agenda_TelefonicaTableAdapter();
             this.Visual_Datos = new System.Windows.Forms.DataGridView();
-            this.agendaTelefonicaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bDProjAgendaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agendaTelefonicaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.numRegDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoFijoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoMovilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Boton_buscar = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.agendaTelefonicaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bD_Proj_AgendaDataSet)).BeginInit();
             this.Consultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Visual_Datos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendaTelefonicaBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDProjAgendaDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendaTelefonicaBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,19 +102,19 @@
             this.toolStripLabel1,
             this.Combo_Ordena_por,
             this.Combo_abcd,
-            this.Boton_Buscar});
+            this.Boton_buscar});
             this.Consultas.Location = new System.Drawing.Point(0, 26);
             this.Consultas.Name = "Consultas";
             this.Consultas.Size = new System.Drawing.Size(779, 26);
             this.Consultas.TabIndex = 3;
             this.Consultas.Text = "consulta0ToolStrip";
-            this.Consultas.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.consulta0ToolStrip_ItemClicked);
+            //this.Consultas.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.consulta0ToolStrip_ItemClicked);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(77, 23);
-            this.toolStripLabel1.Text = "Ordenar por";
+            this.toolStripLabel1.Size = new System.Drawing.Size(68, 23);
+            this.toolStripLabel1.Text = "Buscar por";
             // 
             // Combo_Ordena_por
             // 
@@ -142,7 +131,6 @@
             this.Combo_Ordena_por.MergeIndex = 1;
             this.Combo_Ordena_por.Name = "Combo_Ordena_por";
             this.Combo_Ordena_por.Size = new System.Drawing.Size(75, 26);
-            this.Combo_Ordena_por.Click += new System.EventHandler(this.toolStripComboBox1_Click);
             // 
             // Combo_abcd
             // 
@@ -226,16 +214,7 @@
             this.Combo_abcd.MergeIndex = 1;
             this.Combo_abcd.Name = "Combo_abcd";
             this.Combo_abcd.Size = new System.Drawing.Size(75, 26);
-            this.Combo_abcd.Click += new System.EventHandler(this.Combo_abcd_Click);
-            // 
-            // Boton_Buscar
-            // 
-            this.Boton_Buscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.Boton_Buscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.Boton_Buscar.Name = "Boton_Buscar";
-            this.Boton_Buscar.Size = new System.Drawing.Size(49, 23);
-            this.Boton_Buscar.Text = "Buscar";
-            this.Boton_Buscar.Click += new System.EventHandler(this.Boton_Buscar_Click);
+            //this.Combo_abcd.OwnerChanged += new System.EventHandler(this.Combo_abcd_OwnerChanged);
             // 
             // agenda_TelefonicaTableAdapter
             // 
@@ -243,78 +222,26 @@
             // 
             // Visual_Datos
             // 
-            this.Visual_Datos.AutoGenerateColumns = false;
             this.Visual_Datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Visual_Datos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.numRegDataGridViewTextBoxColumn,
-            this.telefonoFijoDataGridViewTextBoxColumn,
-            this.telefonoMovilDataGridViewTextBoxColumn,
-            this.nombresDataGridViewTextBoxColumn,
-            this.apellidosDataGridViewTextBoxColumn,
-            this.direccionDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn});
-            this.Visual_Datos.DataSource = this.agendaTelefonicaBindingSource2;
             this.Visual_Datos.Location = new System.Drawing.Point(0, 55);
             this.Visual_Datos.Name = "Visual_Datos";
             this.Visual_Datos.Size = new System.Drawing.Size(779, 278);
             this.Visual_Datos.TabIndex = 4;
-            // 
-            // agendaTelefonicaBindingSource1
-            // 
-            this.agendaTelefonicaBindingSource1.DataMember = "Agenda_Telefonica";
-            this.agendaTelefonicaBindingSource1.DataSource = this.bD_Proj_AgendaDataSet;
-            // 
-            // bDProjAgendaDataSetBindingSource
-            // 
-            this.bDProjAgendaDataSetBindingSource.DataSource = this.bD_Proj_AgendaDataSet;
-            this.bDProjAgendaDataSetBindingSource.Position = 0;
             // 
             // agendaTelefonicaBindingSource2
             // 
             this.agendaTelefonicaBindingSource2.DataMember = "Agenda_Telefonica";
             this.agendaTelefonicaBindingSource2.DataSource = this.bD_Proj_AgendaDataSet;
             // 
-            // numRegDataGridViewTextBoxColumn
+            // Boton_buscar
             // 
-            this.numRegDataGridViewTextBoxColumn.DataPropertyName = "Num_Reg";
-            this.numRegDataGridViewTextBoxColumn.HeaderText = "Num_Reg";
-            this.numRegDataGridViewTextBoxColumn.Name = "numRegDataGridViewTextBoxColumn";
-            // 
-            // telefonoFijoDataGridViewTextBoxColumn
-            // 
-            this.telefonoFijoDataGridViewTextBoxColumn.DataPropertyName = "Telefono Fijo";
-            this.telefonoFijoDataGridViewTextBoxColumn.HeaderText = "Telefono Fijo";
-            this.telefonoFijoDataGridViewTextBoxColumn.Name = "telefonoFijoDataGridViewTextBoxColumn";
-            // 
-            // telefonoMovilDataGridViewTextBoxColumn
-            // 
-            this.telefonoMovilDataGridViewTextBoxColumn.DataPropertyName = "Telefono Movil";
-            this.telefonoMovilDataGridViewTextBoxColumn.HeaderText = "Telefono Movil";
-            this.telefonoMovilDataGridViewTextBoxColumn.Name = "telefonoMovilDataGridViewTextBoxColumn";
-            // 
-            // nombresDataGridViewTextBoxColumn
-            // 
-            this.nombresDataGridViewTextBoxColumn.DataPropertyName = "Nombre(s)";
-            this.nombresDataGridViewTextBoxColumn.HeaderText = "Nombre(s)";
-            this.nombresDataGridViewTextBoxColumn.Name = "nombresDataGridViewTextBoxColumn";
-            // 
-            // apellidosDataGridViewTextBoxColumn
-            // 
-            this.apellidosDataGridViewTextBoxColumn.DataPropertyName = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos";
-            this.apellidosDataGridViewTextBoxColumn.Name = "apellidosDataGridViewTextBoxColumn";
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "e-mail";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "e-mail";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.Boton_buscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.Boton_buscar.Image = ((System.Drawing.Image)(resources.GetObject("Boton_buscar.Image")));
+            this.Boton_buscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Boton_buscar.Name = "Boton_buscar";
+            this.Boton_buscar.Size = new System.Drawing.Size(49, 23);
+            this.Boton_buscar.Text = "Buscar";
+            this.Boton_buscar.Click += new System.EventHandler(this.Boton_buscar_Click_1);
             // 
             // Formulario_Visual
             // 
@@ -337,8 +264,6 @@
             this.Consultas.ResumeLayout(false);
             this.Consultas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Visual_Datos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agendaTelefonicaBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDProjAgendaDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendaTelefonicaBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -358,17 +283,8 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripComboBox Combo_Ordena_por;
         private System.Windows.Forms.ToolStripComboBox Combo_abcd;
-        private System.Windows.Forms.ToolStripButton Boton_Buscar;
         private System.Windows.Forms.DataGridView Visual_Datos;
-        private System.Windows.Forms.BindingSource agendaTelefonicaBindingSource1;
-        private System.Windows.Forms.BindingSource bDProjAgendaDataSetBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numRegDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoFijoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoMovilDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombresDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidosDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource agendaTelefonicaBindingSource2;
+        private System.Windows.Forms.ToolStripButton Boton_buscar;
     }
 }

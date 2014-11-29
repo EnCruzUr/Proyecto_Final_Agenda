@@ -24,23 +24,22 @@ namespace Proyecto_Agenda
 
         private void busqueda_de_agenda(string consulta)
         {
-            string busqueda;
-            busqueda = consulta;
             conexion.Open();
-            //SqlDataAdapter busqueda_de_consulta;
-            //busqueda_de_consulta= new SqlDataAdapter (busqueda,conexion);
-            OleDbCommand busqueda_de_consulta = new OleDbCommand(busqueda,conexion);
-            DataSet datos=new DataSet();
-            //busqueda_de_consulta.Fill(datos,"Agenda_Telefonica");
-            Visual_Datos.DataSource = datos;
-            //Visual_Datos.DataMember = "Agenda_Telefonica";
-            conexion.Close();
+            OleDbDataAdapter busqueda = new OleDbDataAdapter(consulta, conexion);
+            OleDbCommandBuilder comando = new OleDbCommandBuilder();
+            DataTable datos = new DataTable();
+            busqueda.Fill(datos);
+            //DataGridView Visual = new DataGridView();
+            BindingSource muestra = new BindingSource();
+            muestra.DataSource = datos;
+            Visual_Datos.DataSource = muestra;
+
+
+
+
+
             
-        }
-
-        private void Boton_Menu_Regresar_Click(object sender, EventArgs e)
-        {
-
+            conexion.Close();
         }
 
         private void Boton_Menu_Regresar_Click_1(object sender, EventArgs e)
@@ -74,18 +73,7 @@ namespace Proyecto_Agenda
             }
 
         }
-
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void consulta0ToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void Boton_Buscar_Click(object sender, EventArgs e)
+        private void Boton_buscar_Click_1(object sender, EventArgs e)
         {
             if (Combo_Ordena_por.Text == "Nombre")
             {
@@ -112,14 +100,8 @@ namespace Proyecto_Agenda
             string consulta;
             consulta = "SELECT  Num_Reg, [Telefono Fijo], [Telefono Movil], [Nombre(s)], Apellidos, Direccion, [e-mail] FROM     Agenda_Telefonica WHERE  (" + ordenamiento + " LIKE '" + az + "%')";
             //this.agenda_TelefonicaTableAdapter
-            // Console.WriteLine("consulta: "+consulta);
+            Console.WriteLine("consulta: " + consulta);
             busqueda_de_agenda(consulta);
-            
-        }
-
-        private void Combo_abcd_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
