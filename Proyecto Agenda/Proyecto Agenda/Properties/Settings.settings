@@ -1,12 +1,4 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<<<<<<< HEAD
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>
-=======
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Proyecto_Agenda.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
@@ -20,4 +12,3 @@
     </Setting>
   </Settings>
 </SettingsFile>
->>>>>>> origin/master
